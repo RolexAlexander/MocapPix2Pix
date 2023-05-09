@@ -46,12 +46,32 @@ def main():
     output_tensor = graph.get_tensor_by_name('generate_output/output:0')
     sess = tf.Session(graph=graph)
 
+    video_file = 'goodbye.mp4'  # Replace with the path to your video file
+
+    cap = cv2.VideoCapture(video_file)
+
+    if not cap.isOpened():
+        print("Error opening video file:", video_file)
+        exit()
+
+    frames = []
+
+
     # OpenCV
-    cap = cv2.VideoCapture(args.video_source)
+    # cap = cv2.VideoCapture(args.video_source)
     fps = video.FPS().start()
 
     while True:
         ret, frame = cap.read()
+
+        if not ret:
+            break
+
+        # Perform any necessary processing on the frame
+        frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        frames.append(frame)
+
+
 
         # resize image and detect face
         frame_resize = cv2.resize(frame, None, fx=1 / DOWNSAMPLE_RATIO, fy=1 / DOWNSAMPLE_RATIO)
@@ -102,6 +122,10 @@ def main():
         fps.update()
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
+
+    # cap.release()
+
+    # print("Number of frames:", len(frames))
 
     fps.stop()
     print('[INFO] elapsed time (total): {:.2f}'.format(fps.elapsed()))

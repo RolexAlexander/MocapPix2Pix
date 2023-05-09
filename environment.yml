@@ -1,36 +1,67 @@
-name: face2face-demo
-channels: !!python/tuple
-- menpo
-- defaults
+name: mocap-demo
+channels:
+  - menpo
+  - anaconda
+  - conda-forge
+  - defaults
 dependencies:
-- bzip2=1.0.6=3
-- menpo::opencv3=3.1.0=py35_0
-- jpeg=9b=0
-- libpng=1.6.27=0
-- menpo::boost=1.59.0=py35_0
-- menpo::dlib=19.4=py35_0
-- conda-forge::tbb
-- mkl=2017.0.3=0
-- numpy=1.13.0=py35_0
-- openssl=1.0.2l=0
-- pip=9.0.1=py35_1
-- python=3.5.3=1
-- readline=6.2=2
-- setuptools=27.2.0=py35_0
-- sqlite=3.13.0=0
-- tk=8.5.18=0
-- wheel=0.29.0=py35_0
-- xz=5.2.2=1
-- zlib=1.2.8=3
-- pip:
-  - backports.weakref==1.0rc1
-  - bleach==1.5.0
-  - html5lib==0.9999999
-  - imutils==0.4.3
-  - markdown==2.6.8
-  - protobuf==3.3.0
-  - six==1.10.0
-  - tensorflow==1.2.1
-  - werkzeug==0.12.2
-prefix: /Users/datitran/anaconda/envs/face2face-demo
-
+  - pip=9.0.1=py35_1
+  - python=3.5.3=1
+  - _libgcc_mutex=0.1=conda_forge
+  - _openmp_mutex=4.5=2_kmp_llvm
+  - blas=1.0=mkl
+  - boost=1.59.0=py35_0
+  - bzip2=1.0.8=h7b6447c_0
+  - ca-certificates=2023.5.7=hbcca054_0
+  - certifi=2018.8.24=py35_1001
+  - dlib=19.4=py35_0
+  - hdf5=1.8.18=1
+  - intel-openmp=2022.0.1=h06a4308_3633
+  - jpeg=9e=h5eee18b_1
+  - libgcc-ng=12.2.0=h65d4601_19
+  - libgfortran=3.0.0=1
+  - libgfortran-ng=7.5.0=ha8ba4b0_17
+  - libgfortran4=7.5.0=ha8ba4b0_17
+  - libpng=1.6.28=1
+  - libstdcxx-ng=12.2.0=h46fd767_19
+  - llvm-openmp=12.0.1=h4bd325d_1
+  - mkl=2022.1.0=hc2b9512_224
+  - ncurses=5.9=10
+  - opencv=3.4.1=py35h40b0b35_1
+  - opencv3=3.1.0=py35_0
+  - openssl=1.0.2u=h516909a_0
+  - python=3.5.3=1
+  - readline=6.2=0
+  - sqlite=3.13.0=0
+  - tbb=2021.7.0=h924138e_0
+  - tk=8.5.19=2
+  - xz=5.2.10=h5eee18b_1
+  - zlib=1.2.8=3
+  - pip:
+      - backports-weakref==1.0rc1
+      - beautifulsoup4==4.10.0
+      - bleach==1.5.0
+      - chardet==4.0.0
+      - filelock==3.2.1
+      - gdown==4.7.1
+      - html5lib==0.9999999
+      - idna==2.10
+      - importlib-resources==3.2.1
+      - imutils==0.4.3
+      - markdown==2.6.8
+      - numpy==1.18.5
+      - opencv-python==4.3.0.38
+      - pip==20.3.4
+      - protobuf==3.3.0
+      - pysocks==1.7.1
+      - requests==2.25.1
+      - setuptools==50.3.2
+      - six==1.10.0
+      - soupsieve==2.1
+      - tensorflow==1.2.1
+      - tqdm==4.64.1
+      - urllib3==1.26.9
+      - werkzeug==0.12.2
+      - wheel==0.37.1
+      - zipp==1.2.0
+prefix: /usr/local/envs/mocap-demo
